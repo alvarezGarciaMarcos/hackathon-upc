@@ -1,0 +1,26 @@
+.navbar {
+  padding: 1em;
+  font-size: 1.3em;
+  position: relative;
+}
+
+.navbar a {
+  border-radius: 5px;
+  position: relative;
+}
+
+.navbar a:not(.navbar-brand)::after {
+  content: "";
+  position: absolute;
+  background-color: teal;
+  top: 90%;
+  left: 50%;
+  width: 0;
+  transform: translateX(-50%);
+  height: 2px;
+  transition: all 200ms ease-in-out;
+}
+
+.navbar a:hover::after {
+  width: 50%;
+}
